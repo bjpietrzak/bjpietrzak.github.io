@@ -182,28 +182,25 @@
             <div class="container mx-auto px-6 text-center">
                  <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Wesprzyj Fundusz Stypendialny</h2>
                 <p class="mt-4 text-stone-600 max-w-3xl mx-auto">
-                   To jest ostatni, najważniejszy krok. Wybierz kwotę, którą chcesz przekazać jako symboliczną "cegiełkę" na budowę przyszłości naszych podopiecznych. Poniżej znajduje się bezpieczny moduł płatności, który umożliwia szybkie i wygodne przekazanie darowizny. Dziękujemy za Twoje zaangażowanie!
+                   To jest ostatni, najważniejszy krok. Kliknij poniższy przycisk, aby przejść do bezpiecznej strony płatności, gdzie możesz dokonać darowizny. Dziękujemy za Twoje zaangażowanie i wsparcie naszych uczniów!
                 </p>
 
                 <div class="max-w-2xl mx-auto mt-12 bg-stone-50 p-8 rounded-2xl shadow-inner border border-stone-200">
-                    <h3 class="text-xl font-semibold text-stone-700">Wybierz kwotę wsparcia (PLN):</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                        <button data-amount="50" class="donation-amount-btn bg-white border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50 text-stone-700 font-bold py-4 rounded-lg transition duration-300 text-lg">50 zł</button>
-                        <button data-amount="100" class="donation-amount-btn bg-white border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50 text-stone-700 font-bold py-4 rounded-lg transition duration-300 text-lg">100 zł</button>
-                        <button data-amount="250" class="donation-amount-btn bg-white border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50 text-stone-700 font-bold py-4 rounded-lg transition duration-300 text-lg">250 zł</button>
-                        <button data-amount="500" class="donation-amount-btn bg-white border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50 text-stone-700 font-bold py-4 rounded-lg transition duration-300 text-lg">500 zł</button>
-                    </div>
-
-                    <div class="mt-6">
-                        <label for="custom-amount" class="text-sm text-stone-600">Lub wpisz własną kwotę:</label>
-                        <input type="number" id="custom-amount-input" placeholder="np. 75" class="mt-2 w-full text-center p-4 border-2 border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-amber-600 outline-none transition text-lg">
+                    <div class="bg-white p-6 rounded-xl border-2 border-amber-600 mb-6">
+                        <div class="text-4xl text-amber-600 mb-3">💝</div>
+                        <h3 class="text-xl font-semibold text-stone-700">Twoja darowizna zmienia życie</h3>
+                        <p class="mt-2 text-stone-600 text-sm">Każda wpłata bezpośrednio wspiera uczniów w ich drodze edukacyjnej</p>
                     </div>
                     
-                    <button id="paypal-button" class="mt-8 w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-5 px-8 rounded-lg transition duration-300 text-xl shadow-lg flex items-center justify-center">
-                        <span>Przejdź do płatności z PayPal</span>
-                        <svg class="w-6 h-6 ml-3" fill="currentColor" viewBox="0 0 24 24"><path d="M16.035 2.44a1.031 1.031 0 0 0-.81.423l-3.324 4.87-1.464-4.87a1.031 1.031 0 0 0-.977-.683h-5.43c-.566 0-.96.48-1.03.959-.02.146.03.292.08.438l3.774 12.44c.14.46.56.74 1.03.74h3.11c.47 0 .89-.28 1.03-.74l1.89-6.22 1.3 1.905c.16.23.42.35.68.35h3.11c.567 0 .96-.48 1.03-.959.02-.146-.03-.292-.08-.438l-3.774-12.44a1.031 1.031 0 0 0-.81-.683h-2.223Z"/></svg>
-                    </button>
-                    <p class="mt-4 text-xs text-stone-500">Zostaniesz przekierowany do bezpiecznej bramki płatności PayPal, gdzie możesz zapłacić kartą lub saldem PayPal.</p>
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=3HMMKZKDC9X4E" id="paypal-button" class="block w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-5 px-8 rounded-lg transition duration-300 text-xl shadow-lg no-underline">
+                        <span class="flex items-center justify-center">
+                            <span>Przejdź do płatności</span>
+                            <svg class="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </span>
+                    </a>
+                    <p class="mt-4 text-xs text-stone-500">Zostaniesz przekierowany do bezpiecznej strony płatności, gdzie możesz wybrać kwotę i metodę wpłaty.</p>
                 </div>
             </div>
         </section>

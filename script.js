@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const goalAmount = 150000;
-    const currentAmount = 48750;
-    const donationButtons = document.querySelectorAll('.donation-amount-btn');
-    const customAmountInput = document.getElementById('custom-amount-input');
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -14,46 +10,28 @@ document.addEventListener('DOMContentLoaded', function() {
     let galleryImages = [];
     let currentGalleryIndex = 0;
 
-    function formatCurrency(value) {
-        return new Intl.NumberFormat('pl-PL', { style: 'currency', currency: 'PLN', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(value);
-    }
-
-    function clearActiveButtonState() {
-         donationButtons.forEach(btn => {
-            btn.classList.remove('bg-amber-600', 'text-white', 'border-amber-600');
-            btn.classList.add('bg-white', 'text-stone-700', 'border-stone-300');
-        });
-    }
-
-    donationButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            clearActiveButtonState();
-            button.classList.add('bg-amber-600', 'text-white', 'border-amber-600');
-            button.classList.remove('bg-white', 'text-stone-700', 'border-stone-300');
-            customAmountInput.value = ''; 
-        });
-    });
-
-    customAmountInput.addEventListener('input', () => {
-        clearActiveButtonState();
-    });
-
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-             if (mobileMenu.classList.contains('hidden') === false) {
+            const target = this.getAttribute('href');
+            if (target !== '#') {
+                document.querySelector(target).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            if (mobileMenu.classList.contains('hidden') === false) {
                 mobileMenu.classList.add('hidden');
             }
         });
     });
 
+    // Mobile menu toggle
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
     
+    // Testimonial slider functions
     function showTestimonial(index) {
         testimonialItems.forEach((item, i) => {
             if (i === index) {
@@ -144,8 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
         showGalleryImage(currentGalleryIndex);
     }
 
-    // Initialize gallery - removed individual image click handlers since we use onclick in HTML
-
     // Modal control handlers
     const closeModalBtn = document.getElementById('close-gallery-modal');
     const prevBtn = document.getElementById('prev-gallery-btn');
@@ -172,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Keyboard navigation
+    // Keyboard navigation for gallery
     document.addEventListener('keydown', (e) => {
         const modal = document.getElementById('gallery-modal');
         if (!modal.classList.contains('hidden')) {
